@@ -1,0 +1,14 @@
+<% content_for :title, "Editar #{@national_team.name}" %>
+
+<div class="page">
+  <div class="page__header">
+    <h1>Editar selección</h1>
+  </div>
+
+  <%= render "form", national_team: @national_team %>
+
+  <div class="page__footer">
+    <%= link_to "Ver detalle", @national_team, class: "btn btn--ghost" %>
+    <%= link_to "Volver", national_teams_path, class: "btn btn--ghost" %>
+  </div>
+</div>

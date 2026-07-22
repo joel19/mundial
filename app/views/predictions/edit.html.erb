@@ -1,0 +1,13 @@
+<% content_for :title, "Editar pronóstico" %>
+
+<div class="page">
+  <div class="page__header">
+    <h1>Editar pronóstico</h1>
+  </div>
+
+  <%= render "form", prediction: @prediction, url: prediction_path(@prediction), method: :patch %>
+
+  <div class="page__footer">
+    <%= link_to "Volver", predictions_path, class: "btn btn--ghost" %>
+  </div>
+</div>

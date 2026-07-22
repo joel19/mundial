@@ -1,0 +1,27 @@
+<%= form_with(model: prediction, url: url, method: method, class: "form") do |form| %>
+  <% if prediction.errors.any? %>
+    <div class="form__errors">
+      <h2><%= pluralize(prediction.errors.count, "error") %> impidieron guardar este pronóstico:</h2>
+
+      <ul>
+        <% prediction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form__group form__group--inline">
+    <%= form.label :predicted_home_score, prediction.match.home_team.name %>
+    <%= form.number_field :predicted_home_score, min: 0, class: "form__input" %>
+  </div>
+
+  <div class="form__group form__group--inline">
+    <%= form.label :predicted_away_score, prediction.match.away_team.name %>
+    <%= form.number_field :predicted_away_score, min: 0, class: "form__input" %>
+  </div>
+
+  <div class="form__actions">
+    <%= form.submit "Guardar pronóstico", class: "btn btn--primary" %>
+  </div>
+<% end %>

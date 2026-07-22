@@ -1,0 +1,27 @@
+<%= form_with(model: match, class: "form") do |form| %>
+  <% if match.errors.any? %>
+    <div class="form__errors">
+      <h2><%= pluralize(match.errors.count, "error") %> impidieron guardar este partido:</h2>
+
+      <ul>
+        <% match.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form__group form__group--inline">
+    <%= form.label :home_team_score, match.home_team.name %>
+    <%= form.number_field :home_team_score, min: 0, class: "form__input" %>
+  </div>
+
+  <div class="form__group form__group--inline">
+    <%= form.label :away_team_score, match.away_team.name %>
+    <%= form.number_field :away_team_score, min: 0, class: "form__input" %>
+  </div>
+
+  <div class="form__actions">
+    <%= form.submit "Guardar marcador", class: "btn btn--primary" %>
+  </div>
+<% end %>

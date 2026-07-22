@@ -1,0 +1,49 @@
+name,confederation,host,debutant
+Argentina,CONMEBOL,false,false
+Brasil,CONMEBOL,false,false
+Colombia,CONMEBOL,false,false
+Ecuador,CONMEBOL,false,false
+Paraguay,CONMEBOL,false,false
+Uruguay,CONMEBOL,false,false
+Alemania,UEFA,false,false
+Austria,UEFA,false,false
+Bélgica,UEFA,false,false
+Bosnia y Herzegovina,UEFA,false,false
+Croacia,UEFA,false,false
+España,UEFA,false,false
+Escocia,UEFA,false,false
+Francia,UEFA,false,false
+Países Bajos,UEFA,false,false
+Noruega,UEFA,false,false
+Portugal,UEFA,false,false
+República Checa,UEFA,false,false
+Suecia,UEFA,false,false
+Suiza,UEFA,false,false
+Turquía,UEFA,false,false
+Inglaterra,UEFA,false,false
+Argelia,CAF,false,false
+Cabo Verde,CAF,false,true
+Costa de Marfil,CAF,false,false
+Egipto,CAF,false,false
+Ghana,CAF,false,false
+Marruecos,CAF,false,false
+RD del Congo,CAF,false,false
+Senegal,CAF,false,false
+Sudáfrica,CAF,false,false
+Túnez,CAF,false,false
+Arabia Saudita,AFC,false,false
+Australia,AFC,false,false
+Catar,AFC,false,false
+Corea del Sur,AFC,false,false
+Irak,AFC,false,false
+Irán,AFC,false,false
+Japón,AFC,false,false
+Jordania,AFC,false,true
+Uzbekistán,AFC,false,true
+Canadá,CONCACAF,true,false
+Curazao,CONCACAF,false,true
+Estados Unidos,CONCACAF,true,false
+Haití,CONCACAF,false,false
+México,CONCACAF,true,false
+Panamá,CONCACAF,false,false
+Nueva Zelanda,OFC,false,false

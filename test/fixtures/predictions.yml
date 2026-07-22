@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  match: one
+  predicted_home_score: 1
+  predicted_away_score: 1
+
+two:
+  user: two
+  match: two
+  predicted_home_score: 1
+  predicted_away_score: 1

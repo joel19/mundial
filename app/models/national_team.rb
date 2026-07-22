@@ -1,0 +1,2 @@
+class NationalTeam < ApplicationRecord
+end

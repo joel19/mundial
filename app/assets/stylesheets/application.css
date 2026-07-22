@@ -1,0 +1,305 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1f2933;
+  background: #f7f8fa;
+  margin: 0;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.page__footer {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.flash {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.flash--notice {
+  background: #e3f9e5;
+  color: #1b7a2e;
+}
+
+/* Team grid / cards */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.team-grid__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.team-card {
+  background: #fff;
+  border: 1px solid #e4e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  height: 100%;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.team-grid__link:hover .team-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.team-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.team-card__name {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.team-card__tags {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  min-height: 1.5rem;
+}
+
+/* Badges */
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge--confederation {
+  background: #e8eefc;
+  color: #2952cc;
+}
+
+.badge--host {
+  background: #fff2cc;
+  color: #a17400;
+}
+
+.badge--debutant {
+  background: #fde8ef;
+  color: #b3245c;
+}
+
+/* Detail page */
+
+.detail {
+  background: #fff;
+  border: 1px solid #e4e7eb;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.detail__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.detail__header h1 {
+  margin: 0;
+}
+
+.detail__list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+}
+
+.detail__row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f1f3;
+  padding-bottom: 0.5rem;
+}
+
+.detail__row dt {
+  color: #616e7c;
+}
+
+.detail__row dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.detail__actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Form */
+
+.form {
+  background: #fff;
+  border: 1px solid #e4e7eb;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 420px;
+}
+
+.form__errors {
+  background: #fde8e8;
+  color: #c81e1e;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.form__errors h2 {
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+}
+
+.form__group {
+  margin-bottom: 1rem;
+}
+
+.form__group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form__group--inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form__group--inline label {
+  margin: 0;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.form__actions {
+  margin-top: 1.25rem;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: #2952cc;
+  color: #fff;
+}
+
+.btn--secondary {
+  background: #e8eefc;
+  color: #2952cc;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #616e7c;
+  border-color: #cbd2d9;
+}
+
+.btn--danger {
+  background: #fde8e8;
+  color: #c81e1e;
+}
+
+/* Match list / predictions */
+
+.match-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.match-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #e4e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  flex-wrap: wrap;
+}
+
+.match-row__teams {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+}
+
+.match-row__score {
+  color: #616e7c;
+  font-weight: 400;
+}
+
+.match-row__prediction {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge--prediction-correct {
+  background: #e3f9e5;
+  color: #1b7a2e;
+}
+
+.badge--prediction-incorrect {
+  background: #fde8e8;
+  color: #c81e1e;
+}

@@ -1,0 +1,20 @@
+<% content_for :title, "National teams" %>
+
+<div class="page">
+  <% if notice %>
+    <p class="flash flash--notice"><%= notice %></p>
+  <% end %>
+
+  <div class="page__header">
+    <h1>Selecciones nacionales</h1>
+    <%= link_to "Nueva selección", new_national_team_path, class: "btn btn--primary" %>
+  </div>
+
+  <div id="national_teams" class="team-grid">
+    <% @national_teams.each do |national_team| %>
+      <%= link_to national_team, class: "team-grid__link" do %>
+        <%= render national_team %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

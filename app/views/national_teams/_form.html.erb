@@ -1,0 +1,40 @@
+<%= form_with(model: national_team, class: "form") do |form| %>
+  <% if national_team.errors.any? %>
+    <div class="form__errors">
+      <h2><%= pluralize(national_team.errors.count, "error") %> impidieron guardar esta selección:</h2>
+
+      <ul>
+        <% national_team.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form__group">
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name, class: "form__input" %>
+  </div>
+
+  <div class="form__group">
+    <%= form.label :confederation, "Confederación" %>
+    <%= form.select :confederation,
+          %w[ CONMEBOL UEFA CAF AFC CONCACAF OFC ],
+          { include_blank: "Selecciona una confederación" },
+          class: "form__input" %>
+  </div>
+
+  <div class="form__group form__group--inline">
+    <%= form.check_box :host, class: "form__checkbox" %>
+    <%= form.label :host, "Anfitrión" %>
+  </div>
+
+  <div class="form__group form__group--inline">
+    <%= form.check_box :debutant, class: "form__checkbox" %>
+    <%= form.label :debutant, "Debutante" %>
+  </div>
+
+  <div class="form__actions">
+    <%= form.submit class: "btn btn--primary" %>
+  </div>
+<% end %>

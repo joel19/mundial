@@ -1,0 +1,15 @@
+<div id="<%= dom_id national_team %>" class="team-card">
+  <div class="team-card__header">
+    <h3 class="team-card__name"><%= national_team.name %></h3>
+    <span class="badge badge--confederation"><%= national_team.confederation %></span>
+  </div>
+
+  <div class="team-card__tags">
+    <% if national_team.host? %>
+      <span class="badge badge--host">Anfitrión</span>
+    <% end %>
+    <% if national_team.debutant? %>
+      <span class="badge badge--debutant">Debutante</span>
+    <% end %>
+  </div>
+</div>

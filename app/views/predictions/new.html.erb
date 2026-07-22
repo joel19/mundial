@@ -1,0 +1,13 @@
+<% content_for :title, "Pronosticar #{@match.home_team.name} vs #{@match.away_team.name}" %>
+
+<div class="page">
+  <div class="page__header">
+    <h1>Pronosticar partido</h1>
+  </div>
+
+  <%= render "form", prediction: @prediction, url: predictions_path(match_id: @match.id), method: :post %>
+
+  <div class="page__footer">
+    <%= link_to "Volver", predictions_path, class: "btn btn--ghost" %>
+  </div>
+</div>

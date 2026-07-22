@@ -1,0 +1,35 @@
+<% content_for :title, @national_team.name %>
+
+<div class="page">
+  <% if notice %>
+    <p class="flash flash--notice"><%= notice %></p>
+  <% end %>
+
+  <div class="detail">
+    <div class="detail__header">
+      <h1><%= @national_team.name %></h1>
+      <span class="badge badge--confederation"><%= @national_team.confederation %></span>
+    </div>
+
+    <dl class="detail__list">
+      <div class="detail__row">
+        <dt>Confederación</dt>
+        <dd><%= @national_team.confederation %></dd>
+      </div>
+      <div class="detail__row">
+        <dt>Anfitrión</dt>
+        <dd><%= @national_team.host? ? "Sí" : "No" %></dd>
+      </div>
+      <div class="detail__row">
+        <dt>Debutante</dt>
+        <dd><%= @national_team.debutant? ? "Sí" : "No" %></dd>
+      </div>
+    </dl>
+
+    <div class="detail__actions">
+      <%= link_to "Editar", edit_national_team_path(@national_team), class: "btn btn--secondary" %>
+      <%= link_to "Volver", national_teams_path, class: "btn btn--ghost" %>
+      <%= button_to "Eliminar", @national_team, method: :delete, data: { turbo_confirm: "¿Seguro que deseas eliminar esta selección?" }, class: "btn btn--danger" %>
+    </div>
+  </div>
+</div>
